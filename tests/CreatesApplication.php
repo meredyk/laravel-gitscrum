@@ -26,7 +26,7 @@ trait CreatesApplication
     {
         parent::setUp();
         $this->artisan('migrate');
-        $this->seed('DummySeeder');
+        $this->seed('DatabaseSeeder');
     }
 
     public function tearDown()
