@@ -1,3 +1,5 @@
+{{ dd($card) }}
+
 <li id="{{$card->id}}" class="card-detail" data-value="{{$card->id}}" style="border-left:3px solid #{{$card->type->color}}">
 
     <h4><a href="{{route('issues.show', ['slug' => $card->slug])}}">{{$card->title}}</a>
