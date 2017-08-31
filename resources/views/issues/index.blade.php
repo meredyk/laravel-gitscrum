@@ -65,7 +65,7 @@
                         data-value="{{$status->id}}" data-endpoint="{{route('issues.status.update')}}">
                         @if(isset($issues[$status->id]))
 
-                            {{ $card = $issues[$status->id] }}
+                            <?php $card = $issues[$status->id] ?>
 
                             <li id="{{$card->id}}" class="card-detail" data-value="{{$card->id}}" style="border-left:3px solid #{{$card->type->color}}">
 
