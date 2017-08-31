@@ -55,6 +55,8 @@ class IssueController extends Controller
                 ->sortBy('position')->groupBy('config_status_id');
         }
 
+        dd($issues);
+
         $configStatus = ConfigStatus::type('issues')->get();
 
         if (!is_null($sprint) && !count($sprint)) {
