@@ -84,6 +84,9 @@ class SprintController extends Controller
      */
     public function show($slug)
     {
+
+        dd($slug);
+
         $sprint = Sprint::slug($slug)
             ->with('issues.user')
             ->with('issues.users')
