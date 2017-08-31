@@ -64,7 +64,7 @@
                         data-color="{{$status->color}}" data-closed="{{$status->is_closed}}"
                         data-value="{{$status->id}}" data-endpoint="{{route('issues.status.update')}}">
                         @if(isset($issues[$status->id]))
-                            
+                            @each('partials.lists.agile-cards', $issues[$status->id], 'card', 'partials.lists.no-items')
                         @endif
                     </ul>
                 </div>
